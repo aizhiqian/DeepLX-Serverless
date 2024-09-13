@@ -7,7 +7,7 @@ const app = express(),
   PORT = 9000,
   allowAlternative = true,
   CORS = {
-    origin: false, // 还支持指定多个域名或正则表达式
+    origin: false, // 默认关闭跨域访问，还支持指定多个域名或正则表达式
     methods: 'GET,POST',
     allowedHeaders: 'Content-Type',
     preflightContinue: false
@@ -67,7 +67,7 @@ async function post(req, res) {
 async function get(req, res) {
   res.json({
     code: 200,
-    message: "Welcome to the DeepL Free API. Please POST to '/translate'. Visit 'https://github.com/guobao2333/DeepLX-Serverless' for more information."
+    message: "Welcome to the DeepL Free API. Please POST to '/translate'. This program is published in accordance with the terms of GUN AGPL-3.0. Visit 'https://github.com/guobao2333/DeepLX-Serverless' for more information."
   });
 };
 
